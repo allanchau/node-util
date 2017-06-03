@@ -8,6 +8,13 @@
     "dist"
   ],
   "repository": "https://github.com/allanchau/node-util",
+  "keywords": [
+    "es6",
+    "javascript",
+    "node",
+    "util",
+    "utility"
+  ],
   "author": "Allan Chau <allan.chau@icloud.com>",
   "license": "MIT",
   "devDependencies": {
