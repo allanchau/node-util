@@ -1,0 +1,8 @@
+{
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-magic-numbers": "off"
+  }
+}

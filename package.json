@@ -1,0 +1,37 @@
+{
+  "name": "@allanchau/util",
+  "version": "1.0.0-alpha.1",
+  "description": "Lightweight JavaScript utility library.",
+  "main": "dist/index.js",
+  "browser": "dist/browser/index.min.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/allanchau/node-util",
+  "author": "Allan Chau <allan.chau@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "buble": "^0.15.2",
+    "eslint": "^3.19.0",
+    "eslint-config-allanchau": "^3.0.3",
+    "jest": "^20.0.4",
+    "jsdoc": "^3.4.3",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "scripts": {
+    "build": "node src/build/index.js",
+    "build-watch": "nodemon --watch src/lib src/build/index.js",
+    "doc": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
+    "test": "./node_modules/.bin/jest",
+    "test-watch": "./node_modules/.bin/jest --watch"
+  }
+}
