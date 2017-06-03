@@ -1,5 +1,8 @@
 # util
 
+[![Build Status](https://travis-ci.org/allanchau/node-util.svg?branch=master)](https://travis-ci.org/allanchau/node-util)
+[![npm](https://img.shields.io/npm/v/@allanchau/util.svg)](https://www.npmjs.com/package/@allanchau/util)
+
 A collection of lightweight JavaScript utility functions.
 
 ## Features
