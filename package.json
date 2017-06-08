@@ -40,8 +40,9 @@
   "scripts": {
     "build": "node src/build/index.js",
     "build-watch": "nodemon --watch src/lib src/build/index.js",
+    "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov > ./coverage/coverage.lcov && ./node_modules/.bin/codecov",
     "doc": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
-    "test": "./node_modules/.bin/nyc ./node_modules/.bin/_mocha src/tests/**/*.test.js && ./node_modules/.bin/nyc report --reporter=text-lcov > ./coverage/coverage.lcov && ./node_modules/.bin/codecov",
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/_mocha src/tests/**/*.test.js",
     "test-watch": "./node_modules/.bin/_mocha --watch"
   }
 }
