@@ -1,6 +1,6 @@
 'use strict';
 
-const { toLowercaseKeys } = require('../../dist');
+const { toLowercaseKeys } = require('../../dist/to');
 
 describe('toLowercaseKeys', () => {
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const { isEqual } = require('../../dist');
+const { isEqual } = require('../../dist/is');
 
 describe('isEqual', () => {
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const { find } = require('../../dist');
+const { find } = require('../../dist/find');
 
 describe('find', () => {
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasValue } = require('../../dist');
+const { hasValue } = require('../../dist/has');
 
 describe('hasValue', () => {
 

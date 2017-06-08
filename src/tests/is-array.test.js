@@ -1,6 +1,6 @@
 'use strict';
 
-const { isArray } = require('../../dist');
+const { isArray } = require('../../dist/is');
 
 describe('isArray', () => {
 
