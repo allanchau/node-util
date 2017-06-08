@@ -1,6 +1,6 @@
 'use strict';
 
-const { isAlpha } = require('../../dist');
+const { isAlpha } = require('../../dist/is');
 
 describe('isAlpha', () => {
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const { toDecimals } = require('../../dist');
+const { toDecimals } = require('../../dist/to');
 
 describe('toDecimals', () => {
 

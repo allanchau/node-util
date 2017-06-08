@@ -1,6 +1,6 @@
 'use strict';
 
-const { isBeta } = require('../../dist');
+const { isBeta } = require('../../dist/is');
 
 describe('isBeta', () => {
 
