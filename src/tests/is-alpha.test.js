@@ -1,35 +1,39 @@
 'use strict';
 
+const { expect } = require('chai');
 const { isAlpha } = require('../../dist/is');
 
-describe('isAlpha', () => {
+describe('isAlpha', function () {
 
-  test('environment to equal alpha', () => {
+  it('should return true when environment is alpha', function () {
 
     // Simulate ENV in node.
     const env = 'alpha';
 
     expect(isAlpha(env))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('environment to equal alpha', () => {
+  it('should return true when environment is alpha', function () {
 
     // Simulate ENV in node.
     const env = 'AlPhA';
 
     expect(isAlpha(env))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('environment not to equal alpha', () => {
+  it('should return false when environment is not alpha', function () {
 
     const env = 'test';
 
     expect(isAlpha(env))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 

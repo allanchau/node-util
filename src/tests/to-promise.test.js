@@ -1,39 +1,38 @@
 'use strict';
 
+const { expect } = require('chai');
 const { toPromise } = require('../../dist/to');
 
-describe('toPromise', () => {
+describe('toPromise', function () {
 
-  test('converts a standard callback into a promise', () => {
+  it('should convert a standard callback into a promise', function () {
 
     const callbackFunction = (data, callback) => callback(null, data);
     const promiseFunction = toPromise(callbackFunction);
-
-    expect.assertions(1);
 
     return promiseFunction('promised!')
       .then((data) => {
 
         return expect(data)
-          .toBe('promised!');
+          .to
+          .equal('promised!');
 
       });
 
   });
 
-  test('converts a standard callback into a promise', () => {
+  it('should convert a standard callback into a promise', function () {
 
     const error = new Error('error');
     const callbackFunction = (data, callback) => callback(error, data);
     const promiseFunction = toPromise(callbackFunction);
 
-    expect.assertions(1);
-
     return promiseFunction('promised!')
       .catch((err) => {
 
         return expect(err)
-          .toBe(error);
+          .to
+          .equal(error);
 
       });
 

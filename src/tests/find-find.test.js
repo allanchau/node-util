@@ -1,27 +1,31 @@
 'use strict';
 
+const { expect } = require('chai');
 const { find } = require('../../dist/find');
 
-describe('find', () => {
+describe('find', function () {
 
-  test('[1] to find value 1', () => {
+  it('should find 1 when obj is [1] and fn is element => element === 1', function () {
 
     expect(find([1], element => element === 1))
-      .toBe(1);
+      .to
+      .equal(1);
 
   });
 
-  test('[1] to not find value 2', () => {
+  it('should find 1 when obj is [1] and fn is element => element === 2', function () {
 
     expect(find([1], element => element === 2))
-      .toBe();
+      .to
+      .equal();
 
   });
 
-  test('{ a: { b: [1] } } to find value 1', () => {
+  it('should find 1 when obj is { a: { b: [1] } } and fn is element => element === 1', function () {
 
     expect(find({ a: { b: [1] } }, element => element === 1))
-      .toBe(1);
+      .to
+      .equal(1);
 
   });
 

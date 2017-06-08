@@ -1,41 +1,47 @@
 'use strict';
 
+const { expect } = require('chai');
 const { isObject } = require('../../dist/is');
 
-describe('isObject', () => {
+describe('isObject', function () {
 
-  test('{} to be an object', () => {
+  it('should return true when obj is {}', function () {
 
     expect(isObject({}))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('[] not to be an object', () => {
+  it('should return false when obj is []', function () {
 
     expect(isObject([]))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('string not to be an object', () => {
+  it('should return false when obj is "string"', function () {
 
     expect(isObject('string'))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('undefined not to be an object', () => {
+  it('should return false when obj is undefined', function () {
 
     expect(isObject())
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('null not to be an object', () => {
+  it('should return false when obj is null', function () {
 
     expect(isObject(null))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
