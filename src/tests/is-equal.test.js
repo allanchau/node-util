@@ -1,64 +1,73 @@
 'use strict';
 
+const { expect } = require('chai');
 const { isEqual } = require('../../dist/is');
 
-describe('isEqual', () => {
+describe('isEqual', function () {
 
-  test('string and string to be equal', () => {
+  it('should return true when value 1 is "string" and value 2 is "string"', function () {
 
     expect(isEqual('string', 'string'))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('["a", "b", "c"] and ["a", "b", "c"] not to be equal', () => {
+  it('should return false when value 1 is ["a", "b", "c"] and value 2 is ["a", "b", "c"]', function () {
 
     // Objects are passed by reference.
     expect(isEqual(['a', 'b', 'c'], ['a', 'b', 'c']))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('{ a: 1, b: 2, c: 3 } and { a: 1, b: 2, c: 3 } not to be equal', () => {
+  it('should return false when value 1 is { a: 1, b: 2, c: 3 } and value 2 is { a: 1, b: 2, c: 3 }', function () {
 
     // Objects are passed by reference.
     expect(isEqual({ a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 }))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('0 and 0 to be equal', () => {
+  it('should return true when value 1 is 0 and value 2 is 0', function () {
 
     expect(isEqual(0, 0))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('0 and -0 not to be equal', () => {
+  it('should return false when value 1 is 0 and value 2 is -0', function () {
 
     expect(isEqual(0, -0))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('undefined and undefined to be equal', () => {
+  it('should return true when value 1 is undefined and value 2 is undefined', function () {
 
     expect(isEqual())
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('null and null to be equal', () => {
+  it('should return true when value 1 is null and value 2 is null', function () {
 
     expect(isEqual(null, null))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('NaN and NaN to be equal', () => {
+  it('should return true when value 1 is NaN and value 2 is NaN', function () {
 
     expect(isEqual(NaN, NaN))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 

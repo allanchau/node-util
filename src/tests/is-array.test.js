@@ -1,41 +1,47 @@
 'use strict';
 
+const { expect } = require('chai');
 const { isArray } = require('../../dist/is');
 
-describe('isArray', () => {
+describe('isArray', function () {
 
-  test('{} to be an array', () => {
+  it('should return true when obj is []', function () {
 
     expect(isArray([]))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('[] not to be an array', () => {
+  it('should return false when obj is {}', function () {
 
     expect(isArray({}))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('string not to be an array', () => {
+  it('should return false when obj is "string"', function () {
 
     expect(isArray('string'))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('undefined not to be an array', () => {
+  it('should return false when obj is undefined', function () {
 
     expect(isArray())
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('null not to be an array', () => {
+  it('should return false when obj is null', function () {
 
     expect(isArray(null))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 

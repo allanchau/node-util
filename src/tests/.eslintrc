@@ -3,6 +3,8 @@
     "sourceType": "script"
   },
   "rules": {
-    "no-magic-numbers": "off"
+    "func-names": "off",
+    "no-magic-numbers": "off",
+    "prefer-arrow-callback": "off"
   }
 }

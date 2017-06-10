@@ -1,34 +1,39 @@
 'use strict';
 
+const { expect } = require('chai');
 const { hasValue } = require('../../dist/has');
 
-describe('hasValue', () => {
+describe('hasValue', function () {
 
-  test('[1] to have value 1', () => {
+  it('should find value 1 when obj is [1]', function () {
 
     expect(hasValue([1], 1))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('[1] to not have value 2', () => {
+  it('should not find value 2 when obj is [1]', function () {
 
     expect(hasValue([1], 2))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
-  test('{ a: 1 } to have value 1', () => {
+  it('should find value 1 when obj is { a: 1 }', function () {
 
     expect(hasValue({ a: 1 }, 1))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('{ a: 1 } to not have value 2', () => {
+  it('should not find value 2 when obj is { a: 1 }', function () {
 
     expect(hasValue({ a: 1 }, 2))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 

@@ -1,0 +1,6 @@
+coverage:
+  parsers:
+    javascript:
+      enable_partials: yes
+fixes:
+  - "dist/::lib/"

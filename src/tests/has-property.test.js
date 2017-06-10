@@ -1,20 +1,23 @@
 'use strict';
 
+const { expect } = require('chai');
 const { hasProperty } = require('../../dist/has');
 
-describe('hasProperty', () => {
+describe('hasProperty', function () {
 
-  test('{ a: 1 } to have property a', () => {
+  it('should find property a when obj is { a: 1 }', function () {
 
     expect(hasProperty({ a: 1 }, 'a'))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('{ a: 1 } to not have property b', () => {
+  it('should not find property b when obj is { a: 1 }', function () {
 
     expect(hasProperty({ a: 1 }, 'b'))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 

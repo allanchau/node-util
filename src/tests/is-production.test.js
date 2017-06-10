@@ -1,35 +1,39 @@
 'use strict';
 
+const { expect } = require('chai');
 const { isProduction } = require('../../dist/is');
 
-describe('isProduction', () => {
+describe('isProduction', function () {
 
-  test('environment to equal production', () => {
+  it('should return true when environment is production', function () {
 
     // Simulate ENV in node.
     const env = 'production';
 
     expect(isProduction(env))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('environment to equal production', () => {
+  it('should return true when environment is production', function () {
 
     // Simulate ENV in node.
     const env = 'PrOdUcTiOn';
 
     expect(isProduction(env))
-      .toBe(true);
+      .to
+      .equal(true);
 
   });
 
-  test('environment not to equal production', () => {
+  it('should return false when environment is not production', function () {
 
     const env = 'test';
 
     expect(isProduction(env))
-      .toBe(false);
+      .to
+      .equal(false);
 
   });
 
