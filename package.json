@@ -1,6 +1,6 @@
 {
   "name": "@allanchau/util",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Lightweight JavaScript utility library.",
   "main": "dist/index.js",
   "browser": "dist/browser/index.min.js",
@@ -17,16 +17,24 @@
   ],
   "author": "Allan Chau <allan.chau@icloud.com>",
   "license": "MIT",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "scripts": {
+    "build": "node src/build/index.js",
+    "build-docs": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
+    "dev": "nodemon --watch src --exec 'npm run build && npm run build-docs && npm run test'",
+    "test": "./node_modules/.bin/jest && ./node_modules/.bin/codecov"
+  },
   "devDependencies": {
     "buble": "^0.15.2",
-    "chai": "^4.0.2",
     "codecov": "^2.2.0",
-    "eslint": "^3.19.0",
-    "eslint-config-allanchau": "^3.0.3",
+    "eslint": "^4.2.0",
+    "@allanchau/eslint-config": "^4.0.2",
+    "jest": "^20.0.4",
     "jsdoc": "^3.4.3",
-    "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
-    "nyc": "^11.0.2",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
@@ -36,13 +44,5 @@
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1"
-  },
-  "scripts": {
-    "build": "node src/build/index.js",
-    "build-watch": "nodemon --watch src/lib src/build/index.js",
-    "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov > ./coverage/coverage.lcov && ./node_modules/.bin/codecov",
-    "doc": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
-    "test": "./node_modules/.bin/nyc ./node_modules/.bin/_mocha src/tests/**/*.test.js",
-    "test-watch": "./node_modules/.bin/_mocha --watch"
   }
 }
