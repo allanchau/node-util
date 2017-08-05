@@ -18,7 +18,7 @@ A collection of lightweight JavaScript utility functions.
 import * from '@allanchau/util';
 
 // Or import individual components.
-import { hasProperty } from '@allanchau/util/has';
+import { hasProperty } from '@allanchau/util';
 ```
 
 ## Documentation
