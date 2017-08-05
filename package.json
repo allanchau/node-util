@@ -1,6 +1,6 @@
 {
   "name": "@allanchau/util",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Lightweight JavaScript utility library.",
   "browser": "dist/index.iife.js",
   "main": "dist/index.cjs.js",
