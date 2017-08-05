@@ -1,6 +1,6 @@
 'use strict';
 
-const { isAlpha } = require('../dist/is');
+const { isAlpha } = require('../dist/index.cjs');
 
 describe('isAlpha', () => {
 

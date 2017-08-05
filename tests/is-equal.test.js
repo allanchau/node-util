@@ -1,6 +1,6 @@
 'use strict';
 
-const { isEqual } = require('../dist/is');
+const { isEqual } = require('../dist/index.cjs');
 
 describe('isEqual', () => {
 

@@ -11,7 +11,7 @@ const nodeResolve = require('rollup-plugin-node-resolve');
  * Determine the bundle destination.
  * @return {String} Path to the bundle destination.
  */
-const dest = () => 'dist/index.mjs';
+const dest = () => 'dist/index.es.js';
 
 /**
  * Determine the bundle entry point.
@@ -23,16 +23,12 @@ module.exports = {
   dest: dest(),
   entry: entry(),
   format: 'es',
-  moduleName: 'main',
+  moduleName: 'util',
   plugins: [
     eslint(),
     globals(),
     builtins(),
-    nodeResolve({
-      browser: true,
-      jsnext: true,
-      main: true,
-    }),
+    nodeResolve({ browser: true, jsnext: true }),
     commonjs(),
     buble(),
   ],

@@ -1,7 +1,7 @@
 'use strict';
 
 const browser = require('./browser');
-const cjs = require('./node/cjs');
-const esm = require('./node/esm');
+const cjs = require('./cjs');
+const es = require('./es');
 
-module.exports = [].concat(browser, cjs, esm);
+module.exports = [].concat(browser, cjs, es);

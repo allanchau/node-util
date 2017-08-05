@@ -2,9 +2,9 @@
   "name": "@allanchau/util",
   "version": "1.0.0-alpha.3",
   "description": "Lightweight JavaScript utility library.",
-  "browser": "dist/browser/index.min.js",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "browser": "dist/index.iife.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "node build/index.js",
-    "build-docs": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
+    "build-docs": "./node_modules/.bin/jsdoc dist/index.es.js --destination docs",
     "dev": "nodemon --watch src --exec 'npm run build && npm run build-docs && npm run test'",
     "test": "./node_modules/.bin/jest && ./node_modules/.bin/codecov"
   },
