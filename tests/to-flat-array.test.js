@@ -1,6 +1,6 @@
 'use strict';
 
-const { toFlatArray } = require('../dist/to');
+const { toFlatArray } = require('../dist/index.cjs');
 
 describe('toFlatArray', () => {
 

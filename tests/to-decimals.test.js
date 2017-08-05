@@ -1,6 +1,6 @@
 'use strict';
 
-const { toDecimals } = require('../dist/to');
+const { toDecimals } = require('../dist/index.cjs');
 
 describe('toDecimals', () => {
 

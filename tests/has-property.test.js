@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasProperty } = require('../dist/has');
+const { hasProperty } = require('../dist/index.cjs');
 
 describe('hasProperty', () => {
 

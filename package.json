@@ -1,9 +1,10 @@
 {
   "name": "@allanchau/util",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Lightweight JavaScript utility library.",
-  "main": "dist/index.js",
-  "browser": "dist/browser/index.min.js",
+  "browser": "dist/index.iife.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -22,16 +23,16 @@
     "collectCoverage": true
   },
   "scripts": {
-    "build": "node src/build/index.js",
-    "build-docs": "./node_modules/.bin/jsdoc dist/index.js --destination docs",
+    "build": "node build/index.js",
+    "build-docs": "./node_modules/.bin/jsdoc dist/index.es.js --destination docs",
     "dev": "nodemon --watch src --exec 'npm run build && npm run build-docs && npm run test'",
     "test": "./node_modules/.bin/jest && ./node_modules/.bin/codecov"
   },
   "devDependencies": {
+    "@allanchau/eslint-config": "^4.0.2",
     "buble": "^0.15.2",
     "codecov": "^2.2.0",
     "eslint": "^4.2.0",
-    "@allanchau/eslint-config": "^4.0.2",
     "jest": "^20.0.4",
     "jsdoc": "^3.4.3",
     "nodemon": "^1.11.0",
@@ -39,7 +40,7 @@
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",

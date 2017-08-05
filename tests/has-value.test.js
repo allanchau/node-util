@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasValue } = require('../dist/has');
+const { hasValue } = require('../dist/index.cjs');
 
 describe('hasValue', () => {
 

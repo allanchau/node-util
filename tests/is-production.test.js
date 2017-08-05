@@ -1,6 +1,6 @@
 'use strict';
 
-const { isProduction } = require('../dist/is');
+const { isProduction } = require('../dist/index.cjs');
 
 describe('isProduction', () => {
 

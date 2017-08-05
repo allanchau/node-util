@@ -1,6 +1,6 @@
 'use strict';
 
-const { toCallback } = require('../dist/to');
+const { toCallback } = require('../dist/index.cjs');
 
 describe('toPromise', () => {
 

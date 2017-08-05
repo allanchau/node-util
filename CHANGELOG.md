@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0-alpha.4 (5 August 2017)
+
+- Improved build process.
+- Fix browser builds.
+- Add `toBoolean` method to convert values into a boolean.
+
 ## v1.0.0-alpha.3 (10 July 2017)
 
 - Integrate Codecov.

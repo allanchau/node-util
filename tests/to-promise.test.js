@@ -1,6 +1,6 @@
 'use strict';
 
-const { toPromise } = require('../dist/to');
+const { toPromise } = require('../dist/index.cjs');
 
 describe('toPromise', () => {
 
