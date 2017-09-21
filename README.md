@@ -1,5 +1,7 @@
 # util
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/allanchau/node-util.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/allanchau/node-util.svg?branch=master)](https://travis-ci.org/allanchau/node-util)
 [![codecov](https://codecov.io/gh/allanchau/node-util/branch/master/graph/badge.svg)](https://codecov.io/gh/allanchau/node-util)
 [![npm](https://img.shields.io/npm/v/@allanchau/util.svg)](https://www.npmjs.com/package/@allanchau/util)
