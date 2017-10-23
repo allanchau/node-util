@@ -31,7 +31,7 @@
   "devDependencies": {
     "@allanchau/eslint-config": "^5.0.0",
     "buble": "^0.16.0",
-    "codecov": "^2.2.0",
+    "codecov": "^3.0.0",
     "eslint": "^4.2.0",
     "jest": "^21.1.0",
     "jsdoc": "^3.4.3",
