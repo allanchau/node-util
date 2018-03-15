@@ -11,19 +11,19 @@ const nodeResolve = require('rollup-plugin-node-resolve');
  * Determine the bundle destination.
  * @return {String} Path to the bundle destination.
  */
-const dest = () => 'dist/index.cjs.js';
+const output = () => 'dist/index.cjs.js';
 
 /**
  * Determine the bundle entry point.
  * @return {String} Path to the bundle entry point.
  */
-const entry = () => 'src/index.js';
+const input = () => 'src/index.js';
 
 module.exports = {
-  dest: dest(),
-  entry: entry(),
   format: 'cjs',
-  moduleName: 'util',
+  input: input(),
+  name: 'util',
+  output: output(),
   plugins: [
     eslint(),
     globals(),
@@ -32,5 +32,5 @@ module.exports = {
     commonjs(),
     buble(),
   ],
-  sourceMap: false,
+  sourcemap: false,
 };

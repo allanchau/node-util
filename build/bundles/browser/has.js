@@ -12,19 +12,19 @@ const uglify = require('rollup-plugin-uglify');
  * Determine the bundle destination.
  * @return {String} Path to the bundle destination.
  */
-const dest = () => 'dist/has/index.js';
+const output = () => 'dist/has/index.js';
 
 /**
  * Determine the bundle entry point.
  * @return {String} Path to the bundle entry point.
  */
-const entry = () => 'src/lib/has/index.js';
+const input = () => 'src/lib/has/index.js';
 
 module.exports = {
-  dest: dest(),
-  entry: entry(),
   format: 'iife',
-  moduleName: 'has',
+  input: input(),
+  name: 'has',
+  output: output(),
   plugins: [
     eslint(),
     globals(),
@@ -34,5 +34,5 @@ module.exports = {
     buble(),
     uglify(),
   ],
-  sourceMap: true,
+  sourcemap: true,
 };
