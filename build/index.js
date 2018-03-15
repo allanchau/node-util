@@ -19,14 +19,14 @@ const distPath = 'dist';
 const createBundle = bundle => new Promise((resolve, reject) => {
 
   rollup({
-    entry: bundle.entry,
+    input: bundle.input,
     plugins: bundle.plugins,
   })
     .then(result => resolve(result.write({
-      dest: bundle.dest,
+      file: bundle.output,
       format: bundle.format,
-      moduleName: bundle.moduleName,
-      sourceMap: bundle.sourceMap,
+      name: bundle.name,
+      sourcemap: bundle.sourcemap,
     })))
     .catch(reject);
 
