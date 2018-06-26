@@ -32,7 +32,7 @@
     "@allanchau/eslint-config": "^5.0.0",
     "buble": "^0.19.2",
     "codecov": "^3.0.0",
-    "eslint": "^4.2.0",
+    "eslint": "^5.0.1",
     "jest": "^22.1.4",
     "jsdoc": "^3.4.3",
     "nodemon": "^1.11.0",
