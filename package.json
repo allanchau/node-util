@@ -29,7 +29,7 @@
     "test": "./node_modules/.bin/jest && ./node_modules/.bin/codecov"
   },
   "devDependencies": {
-    "@allanchau/eslint-config": "^5.0.0",
+    "@allanchau/eslint-config": "^7.0.0",
     "buble": "^0.19.2",
     "codecov": "^3.0.0",
     "eslint": "^4.2.0",
